@@ -12,18 +12,19 @@ jobs:
       - run: echo "Job is running on a ${{ runner.os }}"
       - name: Check out repository
         uses: actions/checkout@v3
-      - run: git pull
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
       - run: npm i
       - run: npm run build
+      - run: git pull
       - uses: EndBug/add-and-commit@v9
         with:
           add: "dist"
           author_name: Jonatan Petersson
           author_email: petersson.jonatan@gmail.com
+          pull: --all
           push: false
       - run: git subtree push --prefix dist origin gh-pages
       - run: echo "🛬 Job finished with the status ${{ job.status }}."
