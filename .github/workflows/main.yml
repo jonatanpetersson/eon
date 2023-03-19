@@ -21,8 +21,8 @@ jobs:
       - uses: EndBug/add-and-commit@v9
         with:
           add: "dist"
-          author_name: Jonatan Petersson
-          author_email: petersson.jonatan@gmail.com
+          author_name: ${{ github.actor }}
+          author_email: ${{ github.event.pusher.email }}
           push: false
       - run: git push origin `git subtree split --prefix dist main`:gh-pages --force
       - run: echo "🛬 Job finished with the status ${{ job.status }}."
