@@ -12,12 +12,11 @@ jobs:
       - run: echo "Job is running on a ${{ runner.os }}"
       - name: Check out repository
         uses: actions/checkout@v3
+      - run: git pull
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: git config --global user.email "petersson.jonatan@gmail.com"
-      - run: git config --global user.name "Jonatan Petersson"
       - run: npm i
       - run: npm run build
       - uses: EndBug/add-and-commit@v9
