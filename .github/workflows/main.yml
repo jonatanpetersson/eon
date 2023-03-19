@@ -10,7 +10,8 @@ jobs:
     steps:
       - run: echo "🛫 CD was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "Job is running on a ${{ runner.os }}"
-      - run: ls
+      - name: Check out repository
+        uses: actions/checkout@v3
       - run: npm i
       - run: npm run build
       - run: git subtree push --prefix dist origin gh-pages
