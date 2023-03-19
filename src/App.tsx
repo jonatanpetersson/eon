@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./app.css";
+import "./App.css";
 import namesWithBackgroundLogo from "./assets/images/names_and_watercolour.svg";
 
 function App() {
