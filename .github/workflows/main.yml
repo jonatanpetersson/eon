@@ -1,0 +1,16 @@
+name: CD to GitHub Pages
+run-name: ${{ github.actor }} is deploying to GitHub Pages
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  Build-And-Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🛫 CD was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "Job is running on a ${{ runner.os }}"
+      - run: npm i
+      - run: npm run build
+      - run: git subtree push --prefix dist origin gh-pages
+      - run: echo "🛬 Job finished with the status ${{ job.status }}."
