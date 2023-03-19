@@ -16,6 +16,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
+      - run: git config --global user.email "petersson.jonatan@gmail.com"
+      - run: git config --global user.name "Jonatan Petersson"
       - run: npm i
       - run: npm run build
       - run: git add dist
