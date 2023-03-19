@@ -18,13 +18,11 @@ jobs:
           node-version: 16
       - run: npm i
       - run: npm run build
-      - run: git fetch --all
       - uses: EndBug/add-and-commit@v9
         with:
           add: "dist"
           author_name: Jonatan Petersson
           author_email: petersson.jonatan@gmail.com
-          pull: --all
           push: false
-      - run: git subtree push --prefix dist origin gh-pages
+      - run: git push origin `git subtree split --prefix dist main`:gh-pages --force
       - run: echo "🛬 Job finished with the status ${{ job.status }}."
