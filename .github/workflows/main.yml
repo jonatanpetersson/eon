@@ -20,7 +20,11 @@ jobs:
       - run: git config --global user.name "Jonatan Petersson"
       - run: npm i
       - run: npm run build
-      - run: git add dist
-      - run: git commit -m "CD from ${{ github.event_name }} to ${{ github.repository }}"
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: "dist"
+          author_name: Jonatan Petersson
+          author_email: petersson.jonatan@gmail.com
+          push: false
       - run: git subtree push --prefix dist origin gh-pages
       - run: echo "🛬 Job finished with the status ${{ job.status }}."
