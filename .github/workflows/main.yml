@@ -18,7 +18,7 @@ jobs:
           node-version: 16
       - run: npm i
       - run: npm run build
-      - run: git pull origin gh-pages
+      - run: git fetch --all
       - uses: EndBug/add-and-commit@v9
         with:
           add: "dist"
