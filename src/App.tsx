@@ -31,7 +31,10 @@ export const App = () => {
         <p>Klädsel: Det du känner dig fin i</p>
         <p>
           Din närvaro är det viktigaste för oss, men om du vill ge en gåva finns
-          vår önskelista <a href="https://presentlistan.nu/C5B4F2">här</a>
+          vår önskelista{" "}
+          <a href="https://presentlistan.nu/C5B4F2" target="_blank">
+            här
+          </a>
         </p>
       </div>
     </>
