@@ -1,13 +1,28 @@
 import { useState } from "react";
 import "./App.css";
-import namesWithBackgroundLogo from "./assets/images/names_and_watercolour.svg";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <img src={namesWithBackgroundLogo} alt="Elias & Nellie Logo" />
+      <div className="welcome">
+        <p>
+          Varmt välkommen att
+          <br />
+          fira vår bröllopsdag!
+        </p>
+        <p>
+          1 JULI 2023
+          <br />
+          <br />
+          Vigsel kl 13:30
+          <br />
+          Gustav adolfs kyrka
+          <br />
+          566 92 Habo
+        </p>
+      </div>
     </>
   );
 }
