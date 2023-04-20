@@ -1,6 +1,7 @@
 name: CD to GitHub Pages
 run-name: ${{ github.actor }} is deploying to GitHub Pages
 on:
+  pull_request:
   push:
     branches:
       - main
