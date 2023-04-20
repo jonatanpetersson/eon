@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Noto Serif Hebrew", serif;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+  line-height: 1.5rem;
+  color: #363434;
 }
 
 #root {
@@ -12,4 +16,5 @@
   align-items: center;
   justify-content: center;
   margin: 1rem;
+  gap: 4rem;
 }
